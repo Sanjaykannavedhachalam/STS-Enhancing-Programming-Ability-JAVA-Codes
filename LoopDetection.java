@@ -40,4 +40,55 @@ class LoopDetection {
 
         System.out.println(detectLoop(head)); // true
     }
+
+    /* complete code */
+    
+    // Function to create a linked list from array with optional loop
+    static Node createLinkedListWithLoop(int[] values, int loopIndex) {
+        if (values == null || values.length == 0) {
+            return null;
+        }
+
+        Node head = new Node(values[0]);
+        Node current = head;
+        Node[] nodes = new Node[values.length];
+        nodes[0] = head;
+
+        // Create the linked list and store references
+        for (int i = 1; i < values.length; i++) {
+            current.next = new Node(values[i]);
+            current = current.next;
+            nodes[i] = current;
+        }
+
+        // Create loop if loopIndex is valid (0-based)
+        if (loopIndex >= 0 && loopIndex < values.length) {
+            current.next = nodes[loopIndex];
+        }
+
+        return head;
+    }
+
+    // Example with dynamic input
+    static void testWithDynamicInput() {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+
+        System.out.print("Enter number of nodes: ");
+        int n = scanner.nextInt();
+
+        int[] values = new int[n];
+        System.out.print("Enter node values: ");
+        for (int i = 0; i < n; i++) {
+            values[i] = scanner.nextInt();
+        }
+
+        System.out.print("Enter loop index (0-based, -1 for no loop): ");
+        int loopIndex = scanner.nextInt();
+
+        Node head = createLinkedListWithLoop(values, loopIndex);
+        
+        System.out.println("Loop detected: " + detectLoop(head));
+        
+        scanner.close();
+    }
 }
