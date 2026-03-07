@@ -38,12 +38,40 @@ javac FileName.java
 java FileName
 ```
 
+## � CAT-2 Programs
+
+Advanced data structures and algorithms implementations for CAT-2 examination:
+
+### Tree Algorithms
+- **RecoverBST.java** - Recover Binary Search Tree with two swapped nodes
+- **TreeViews.java** - Top, Bottom, Left, and Right views of binary tree
+- **VerticalOrderTraversal.java** - Vertical order traversal of binary tree
+- **BoundaryTraversal.java** - Anti-clockwise boundary traversal of binary tree
+
+### Graph Algorithms
+- **BFS_DFS.java** - Breadth-First Search and Depth-First Search (Recursive & Iterative)
+- **DialsAlgorithm.java** - Shortest path for small integer weighted graphs
+- **BellmanFord.java** - Shortest path with negative weights and cycle detection
+- **TopologicalSort.java** - DFS and BFS (Kahn's Algorithm) based topological sorting
+
+### Heap Structures
+- **HeapSort.java** - In-place heap sort implementation
+- **BinomialHeap.java** - Binomial heap with efficient union operation
+- **KaryHeap.java** - K-ary heap generalization (k children per node)
+- **WinnerTree.java** - Tournament tree for external sorting and top-k elements
+
 ## 📝 Topics Covered
 
 - Doubly Linked Lists
 - Stack Operations
 - Queue Operations
 - Sorting Algorithms
+- Binary Search Trees
+- Tree Traversals & Views
+- Graph Traversal (BFS, DFS)
+- Shortest Path Algorithms
+- Topological Sorting
+- Advanced Heap Structures
 - Recursive & Iterative Approaches
 - Time & Space Complexity Optimization
 
