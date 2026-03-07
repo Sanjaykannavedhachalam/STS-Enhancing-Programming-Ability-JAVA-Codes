@@ -38,7 +38,7 @@ javac FileName.java
 java FileName
 ```
 
-## � CAT-2 Programs
+## 📋 CAT-2 Programs
 
 Advanced data structures and algorithms implementations for CAT-2 examination:
 
